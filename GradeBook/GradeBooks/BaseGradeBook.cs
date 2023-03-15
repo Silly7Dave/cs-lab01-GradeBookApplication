@@ -6,14 +6,15 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.CompilerServices;
 
 namespace GradeBook.GradeBooks
 {
     public class BaseGradeBook
     {
+        public GradeBookType Type { get; set; }
         public string Name { get; set; }
         public List<Student> Students { get; set; }
-
         public BaseGradeBook(string name)
         {
             Name = name;
